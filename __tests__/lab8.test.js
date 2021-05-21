@@ -193,9 +193,11 @@ describe('Basic user flow for SPA ', () => {
   }, 100000);
 
   // create your own test 17
-    // define and implement test11: Clicking the back button once should bring the user back to the home page
-    it('Test17: Clicking the back button, new URL should be the homePage with http://127.0.0.1:5500/', async() => {
+    // define and implement test17: Clicking the back button twice after navigating to settings for entry should bring the user back to the home page
+    it('Test17: Clicking the back button twice after navigating to settings from an entry, new URL should be the homePage with http://127.0.0.1:5500/', async() => {
       // implement test11: Clicking on the back button should update the URL’
+      await page.click('header > img');
+      await page.goBack();
       await page.goBack();
       expect(page.url()).toBe("http://127.0.0.1:5500/");
     });
