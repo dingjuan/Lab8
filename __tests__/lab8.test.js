@@ -202,7 +202,7 @@ describe('Basic user flow for SPA ', () => {
 
   // create your own test 18
    // define and implement test18: Verify the title is current when clicking on the fourth entry
-   it('Test18: Clicking first <journal-entry>, new URL should contain /#entry1', async () => {
+   it('Test18: Clicking fourth <journal-entry>, new URL should contain /#entry4', async () => {
     // implement test3: Clicking on the fourth journal entry should update the URL to contain “/#entry4”
     const entries = await page.$$('journal-entry');
     let first_entry = await entries[3];
@@ -214,7 +214,7 @@ describe('Basic user flow for SPA ', () => {
 
   // create your own test 19
   // define and implement test19: Verify the title is current when clicking on the fourth entry
-  it('Test19: Clicking second <journal-entry>, checking page header title should be Entry 2', async () => {
+  it('Test19: Clicking fourth <journal-entry>, checking page header title should be Entry 4', async () => {
     // implement test15: Clicking on the second journal entry should update the header text to “Entry 2” 
     const result = await page.evaluate(() => {
       let header =  document.querySelector('header > h1').innerHTML;  
@@ -226,7 +226,7 @@ describe('Basic user flow for SPA ', () => {
 
   // create your own test 20
    // define and implement test20: Verify the entry page contents should include audio src when clicking on the fourth entry
-   it('Test20: On first Entry page - checking <entry-page> contents', async () => {
+   it('Test20: On fourth Entry page - checking <entry-page> contents', async () => {
     /*
      implement test20: Clicking on the fourth journal entry should contain the audio content: 
         { 
