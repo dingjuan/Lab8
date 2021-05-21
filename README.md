@@ -13,7 +13,7 @@ Pablo Gratas
    Yes. Since this is a specific function with clearly defined rules, it is easy to test this using the unit test system.
 
 4. What do you expect to happen if we run our puppeteer tests with the field “headless” set to true?
-   The tests would run without the UI, and we wouldn't be able to interact in the way we could with a UI.
+   The tests would run without the UI, that is, no chrome windows open, and the tests are run in the background without visual feedback apart from what appears on the terminal.
 
 5. What would your beforeAll callback look like if you wanted to start from the settings page before every test case?
     beforeAll(async () => {
